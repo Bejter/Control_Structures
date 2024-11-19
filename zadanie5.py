@@ -1,5 +1,5 @@
 #2
-'''
+
 count = 0
 while count < 5:
     print(count)
@@ -75,7 +75,7 @@ while countdown > 0:
     time.sleep(1) 
 
 print("Time's up!")
-'''
+
 #8
 
 balance = 1000 
