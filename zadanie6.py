@@ -263,3 +263,151 @@ print(f"Have an instagram account: {'yes' if instagramAcc == True else 'no'}")
 
 #20
 
+decimal_number = int(input("Enter decimal number: "))
+
+binary_number = ""
+number = decimal_number
+
+while number > 0:
+    remainder = number % 2
+    binary_number = str(remainder) + binary_number
+    number = number // 2
+
+print(f"{decimal_number}(10) = {binary_number}(2)")
+
+#21
+
+
+amount = int(input("Enter amount of coins: "))
+
+count_five = 0
+count_two = 0
+count_one = 0
+
+while amount > 0:
+    if amount >= 5:
+        amount -= 5
+        count_five += 1
+    elif amount >= 2:
+        amount -= 2
+        count_two += 1
+    elif amount >= 1:
+        amount -= 1
+        count_one += 1
+
+#22
+
+for i in range(1, 30):
+    if i%3==0 and i%5==0:
+        print("both")
+    elif i%3==0:
+        print("three")
+    elif i%5==0:
+        print("five")
+    else:
+        print(i)
+
+#23
+
+number_calc = int(input("Enter number for multiplication table: "))
+
+for i in range(1,11):
+    print(f"{number_calc} x {i} = {number_calc * i}")
+
+#24
+
+counter = 1
+
+for i in range(0,9):
+    if i < 4:
+        print("*" * counter)
+        counter += 1
+    else:
+        print("*" * counter)
+        counter -= 1
+
+#25
+
+for i in range(1, 10):
+    print(f"{i}" * i)
+
+#26
+
+tries = 0
+counter = 0;
+
+correct_pin = "0805"
+
+while tries < 3:
+    pin_to_verify = input("Enter the PIN code: ")
+    if pin_to_verify == correct_pin:
+        print("Correct PIN!")
+        break
+    else:
+        counter += 1;
+        if counter == 3:
+            print("Sorry, your payment card has been blocked")
+            break
+        else:
+            print("Incorrect...")
+
+#27
+
+i = 6  
+while i >= 0:
+    j = 1  
+    while j < 4:
+        print(f'{i + j}', end=' ')
+        j += 1  
+    print()  
+    i -= 3 
+
+#28
+
+first_digit = 0
+second_digit = 1
+
+nmp = 0
+
+print(first_digit)
+for i in range(20):
+    print(f"{first_digit + second_digit}")
+    nmp = second_digit
+    second_digit = first_digit + second_digit
+    first_digit = nmp
+
+#29
+
+N = int(input("Enter the number of prime numbers to find: "))
+
+count = 0 
+number = 2 
+
+while count < N:
+    is_prime = True
+
+    for i in range(2, number):
+        if number % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print(number, end=' ')  
+        count += 1 
+
+    number += 1
+
+#30
+
+for i in range(1, 8):
+    for j in range(1, 7):
+        if j == 1:
+            print(i, end= ' ')
+        print(i + (j*7), end= ' ')
+    print()
+
+#31
+import random
+
+for i in range(20):
+    print(random.randint(5,10))
